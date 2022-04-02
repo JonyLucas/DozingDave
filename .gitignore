@@ -1,0 +1,7 @@
+Library/
+Logs/
+Temp/
+Library/ArtifactDB
+*.log
+Library/Bee/
+Library/SourceAssetDB
