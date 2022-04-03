@@ -1,3 +1,4 @@
+using Game.Enum;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,12 @@ namespace Game.Grid.ScriptableObjects
 
         [SerializeField]
         private List<Sprite> _pictureFragments;
+
+        [SerializeField]
+        private ThoughtType _thoughtType;
+
+        public ThoughtType ThoughtType
+        { get { return _thoughtType; } }
 
         public int Width
         { get { return _width; } }

@@ -1,12 +1,13 @@
+using Game.Factories;
 using Game.Grid.ScriptableObjects;
-using Game.GridScripts;
+using Game.GridElements;
 
 namespace Game.Managers
 {
     public class GridManager
     {
         private static GridManager _instance;
-        private readonly GridBuilder _builder;
+        private readonly GridFactory _builder;
         private GridBoard _grid;
         private GridBoard _targetGrid;
 
@@ -24,7 +25,7 @@ namespace Game.Managers
 
         private GridManager()
         {
-            _builder = new GridBuilder();
+            _builder = new GridFactory();
         }
 
         public void CreateGrid(int width, int heigth)

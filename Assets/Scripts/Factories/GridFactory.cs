@@ -1,10 +1,10 @@
-using Game.Grid.ScriptableObjects;
+using Game.GridElements;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game.GridScripts
+namespace Game.Factories
 {
-    public class GridBuilder
+    public class GridFactory
     {
         private Sprite _emptyBlock;
 
@@ -18,7 +18,7 @@ namespace Game.GridScripts
             var gridObject = new GameObject("Grid");
             var grid = gridObject.AddComponent<GridBoard>();
 
-            var gridBlocks = new List<Block>();
+            var gridBlocks = new List<GridBlock>();
 
             var size = width * height;
             var lineIndex = 0;
@@ -45,15 +45,16 @@ namespace Game.GridScripts
             return grid;
         }
 
-        private Block CreateBlock(GridBoard grid, int index, int lineIndex, int columnIndex)
+        private GridBlock CreateBlock(GridBoard grid, int index, int lineIndex, int columnIndex)
         {
             var blockObject = new GameObject($"Block ({index})");
             blockObject.transform.parent = grid.transform;
 
             var renderer = blockObject.AddComponent<SpriteRenderer>();
             renderer.sprite = _emptyBlock;
+            renderer.sortingLayerName = "Grid";
 
-            var blockScript = blockObject.AddComponent<Block>();
+            var blockScript = blockObject.AddComponent<GridBlock>();
             blockScript.XPosition = columnIndex;
             blockScript.YPosition = lineIndex;
             blockScript.IsOccupied = false;

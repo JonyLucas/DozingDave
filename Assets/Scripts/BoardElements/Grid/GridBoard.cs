@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game.GridScripts
+namespace Game.GridElements
 {
     public class GridBoard : MonoBehaviour
     {
-        public List<Block> Blocks { get; set; }
+        public List<GridBlock> Blocks { get; set; }
         public bool IsTargetGrid { get; set; }
 
         public bool ValidateGrid()

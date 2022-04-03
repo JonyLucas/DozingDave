@@ -1,9 +1,9 @@
 using Game.Managers;
 using UnityEngine;
 
-namespace Game.GridScripts
+namespace Game.GridElements
 {
-    public class Block : MonoBehaviour
+    public class GridBlock : MonoBehaviour
     {
         private int _xPosition;
         private int _yPosition;
@@ -40,21 +40,7 @@ namespace Game.GridScripts
             }
         }
 
-        public Sprite CurrentSprite
-        {
-            get
-            {
-                return transform.GetComponent<SpriteRenderer>().sprite;
-            }
-            set
-            {
-                var renderer = transform.GetComponent<SpriteRenderer>();
-                if (renderer != null)
-                {
-                    renderer.sprite = value;
-                }
-            }
-        }
+        public Sprite CurrentSprite { get; set; }
 
         public Sprite TargetSprite { get; set; }
 
