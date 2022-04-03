@@ -58,7 +58,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BoardElements\Grid\GridBoard.cs" />
     <Compile Include="Assets\Scripts\Managers\GridManager.cs" />
-    <Compile Include="Assets\Scripts\BoardElements\Block\GridBlock.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Enum\ThoughtType.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\TargetThought.cs" />
@@ -66,7 +65,7 @@
     <Compile Include="Assets\Scripts\BoardElements\Grid\MainGrid.cs" />
     <Compile Include="Assets\Scripts\BoardElements\Grid\TargetGrid.cs" />
     <Compile Include="Assets\Scripts\Spawners\BlockSpawner.cs" />
-    <Compile Include="Assets\Scripts\BoardElements\Block\SpawnedBlock.cs" />
+    <Compile Include="Assets\Scripts\BoardElements\Block\MovingBlock.cs" />
     <Compile Include="Assets\Scripts\Factories\BlockFactory.cs" />
     <Compile Include="Assets\Scripts\Observers\Events\GameEvent.cs" />
     <Compile Include="Assets\Scripts\Observers\Listeners\EventListener.cs" />
@@ -74,6 +73,7 @@
     <Compile Include="Assets\Scripts\Observers\Listeners\GenericEventListener.cs" />
     <Compile Include="Assets\Scripts\Observers\Events\GenericGameEvent.cs" />
     <Compile Include="Assets\Scripts\Observers\Listeners\IntEventListener.cs" />
+    <Compile Include="Assets\Scripts\BoardElements\Block\BackgroundBlock.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace Game.GridElements
 {
-    public class SpawnedBlock : MonoBehaviour
+    public class MovingBlock : MonoBehaviour
     {
         [SerializeField]
         private float _moveRate = 1;
 
-        public GridBlock TargetBlock { get; set; }
+        public BackgroundBlock TargetBlock { get; set; }
 
         private bool _isMoving = true;
 

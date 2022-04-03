@@ -8,7 +8,7 @@ namespace Game.Factories
     {
         private Sprite _emptyBlock;
 
-        public GridBlock CreateGridBlock(GridBoard grid, int index, int lineIndex, int columnIndex)
+        public BackgroundBlock CreateGridBlock(GridBoard grid, int index, int lineIndex, int columnIndex)
         {
             if (_emptyBlock == null)
             {
@@ -22,7 +22,7 @@ namespace Game.Factories
             renderer.sprite = _emptyBlock;
             renderer.sortingLayerName = "Grid";
 
-            var blockScript = blockObject.AddComponent<GridBlock>();
+            var blockScript = blockObject.AddComponent<BackgroundBlock>();
             blockScript.XPosition = columnIndex;
             blockScript.YPosition = lineIndex;
             blockScript.IsOccupied = false;

@@ -24,7 +24,7 @@ namespace Game.Factories
             var gridObject = new GameObject("Grid");
             var grid = gridObject.AddComponent<MainGrid>();
 
-            var gridBlocks = new List<GridBlock>();
+            var gridBlocks = new List<BackgroundBlock>();
 
             var size = width * height;
             var lineIndex = 0;

@@ -1,10 +1,12 @@
 using Game.Grid.ScriptableObjects;
+using Game.Managers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game.Spawners
 {
+    [RequireComponent(typeof(GameManager))]
     public class BlockSpawner : MonoBehaviour
     {
         [SerializeField]
@@ -12,8 +14,8 @@ namespace Game.Spawners
 
         private List<GameObject> framgmentsList;
 
-        private TargetThought _coffeeTarget;
-        private TargetThought _target;
+        private TargetThought _coffeeThought;
+        private TargetThought _targetThought;
 
         // Start is called before the first frame update
         private void Start()
@@ -27,7 +29,7 @@ namespace Game.Spawners
 
         public void SetTarget(TargetThought target)
         {
-            _target = target;
+            _targetThought = target;
         }
     }
 }

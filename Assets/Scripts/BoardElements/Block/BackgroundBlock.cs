@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.GridElements
 {
-    public class GridBlock : MonoBehaviour
+    public class BackgroundBlock : MonoBehaviour
     {
         private int _xPosition;
         private int _yPosition;

@@ -7,7 +7,7 @@ namespace Game.GridElements
     {
         private int _width;
         private int _height;
-        private List<GridBlock> _blocks;
+        private List<BackgroundBlock> _blocks;
 
         //public bool IsTargetGrid { get; set; }
 
@@ -17,7 +17,7 @@ namespace Game.GridElements
         public int Height
         { get { return _height; } }
 
-        public List<GridBlock> Blocks
+        public List<BackgroundBlock> Blocks
         {
             get { return _blocks; }
             set

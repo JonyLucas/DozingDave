@@ -1,4 +1,5 @@
 using Game.Grid.ScriptableObjects;
+using Game.Spawners;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,8 @@ namespace Game.Managers
         private int _height = 4;
 
         private readonly GridManager _gridManager = GridManager.Instance;
+
+        private BlockSpawner _spawner;
 
         // Start is called before the first frame update
         private void Start()
