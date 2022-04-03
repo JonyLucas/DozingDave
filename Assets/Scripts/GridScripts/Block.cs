@@ -1,18 +1,61 @@
-using System.Collections;
-using System.Collections.Generic;
+using Game.Managers;
 using UnityEngine;
 
-public class Block : MonoBehaviour
+namespace Game.GridScripts
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Block : MonoBehaviour
     {
-        
-    }
+        private int _xPosition;
+        private int _yPosition;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public int XPosition
+        {
+            get
+            {
+                return _xPosition;
+            }
+
+            set
+            {
+                _xPosition = value;
+                var auxPosition = transform.localPosition;
+                auxPosition.x += _xPosition;
+                transform.localPosition = auxPosition;
+            }
+        }
+
+        public int YPosition
+        {
+            get
+            {
+                return _yPosition;
+            }
+
+            set
+            {
+                _yPosition = value;
+                var auxPosition = transform.localPosition;
+                auxPosition.y -= _yPosition;
+                transform.localPosition = auxPosition;
+            }
+        }
+
+        public Sprite CurrentSprite
+        {
+            get
+            {
+                return transform.GetComponent<SpriteRenderer>().sprite;
+            }
+            set
+            {
+                var renderer = transform.GetComponent<SpriteRenderer>();
+                if (renderer != null)
+                {
+                    renderer.sprite = value;
+                }
+            }
+        }
+
+        public bool IsOccupied { get; set; }
     }
 }

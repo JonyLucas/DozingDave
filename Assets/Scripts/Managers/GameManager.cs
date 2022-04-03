@@ -2,17 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+namespace Game.Managers
 {
-    // Start is called before the first frame update
-    void Start()
+    public class GameManager : MonoBehaviour
     {
-        
-    }
+        [SerializeField]
+        private int _width = 4;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField]
+        private int _height = 4;
+
+        [SerializeField]
+        private ScriptableGrid _mainGrid;
+
+        [SerializeField]
+        private ScriptableGrid _targetGrid;
+
+        // Start is called before the first frame update
+        private void Start()
+        {
+            GridManager.Instance.CreateGrid(_width, _height);
+        }
+
+        // Update is called once per frame
+        private void Update()
+        {
+        }
     }
 }

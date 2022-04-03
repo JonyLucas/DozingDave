@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game.GridScripts
+namespace Game.Enum
 {
-    public class GridScript : MonoBehaviour
+    public enum ThoughtType
     {
+        Coffee,
+        SpreadSheet
     }
 }

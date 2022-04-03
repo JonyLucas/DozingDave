@@ -56,11 +56,14 @@
     <Analyzer Include="D:\Arquivos de Programas\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\GridScripts\GridBuilder.cs" />
-    <Compile Include="Assets\Scripts\GridScripts\GridScript.cs" />
-    <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\GridManager.cs" />
     <Compile Include="Assets\Scripts\GridScripts\Block.cs" />
+    <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GridScripts\GridBuilder.cs" />
+    <Compile Include="Assets\Scripts\GridScripts\GridBoard.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\ScriptableGrid.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\TargetPicture.cs" />
+    <Compile Include="Assets\Scripts\Enum\ThoughtType.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

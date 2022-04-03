@@ -1,18 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using Game.GridScripts;
 
-public class GridManager : MonoBehaviour
+namespace Game.Managers
 {
-    // Start is called before the first frame update
-    void Start()
+    public class GridManager
     {
-        
-    }
+        private static GridManager _instance;
+        private readonly GridBuilder _builder;
+        private GridBoard _grid;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public static GridManager Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new GridManager();
+                }
+                return _instance;
+            }
+        }
+
+        private GridManager()
+        {
+            _builder = new GridBuilder();
+        }
+
+        public void CreateGrid(int width, int heigth)
+        {
+            _grid = _builder.CreateGrid(width, heigth);
+        }
+
+        public void ClearGrid()
+        {
+            _grid.Blocks.ForEach(block => block.IsOccupied = false);
+        }
     }
 }
