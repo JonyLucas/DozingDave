@@ -56,6 +56,16 @@ namespace Game.GridScripts
             }
         }
 
+        public Sprite TargetSprite { get; set; }
+
         public bool IsOccupied { get; set; }
+
+        public bool MatchTarget
+        {
+            get
+            {
+                return IsOccupied && TargetSprite.name == CurrentSprite.name;
+            }
+        }
     }
 }

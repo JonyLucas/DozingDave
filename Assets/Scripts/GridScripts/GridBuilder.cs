@@ -1,3 +1,4 @@
+using Game.Grid.ScriptableObjects;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,15 +6,15 @@ namespace Game.GridScripts
 {
     public class GridBuilder
     {
-        private Sprite _emptyBlock;
+        private readonly Sprite _emptyBlock;
+
+        public GridBuilder()
+        {
+            _emptyBlock = Resources.Load<Sprite>("Sprites/empty_block");
+        }
 
         public GridBoard CreateGrid(int width, int height)
         {
-            if (_emptyBlock == null)
-            {
-                _emptyBlock = Resources.Load<Sprite>("Sprites/empty_block");
-            }
-
             var gridObject = new GameObject("Grid");
             var grid = gridObject.AddComponent<GridBoard>();
 
@@ -59,5 +60,16 @@ namespace Game.GridScripts
 
             return blockScript;
         }
+
+        //public GridBoard CreateGridByTarget(TargetPicture target)
+        //{
+        //    var grid = CreateGrid(target.Width, target.Height);
+        //    var fragments = target.PictureFragments;
+
+        //    for (int i = 0; i < grid.Blocks.Count; i++)
+        //    {
+        //        grid.Blocks[i].TargetSprite = fragments[i];
+        //    }
+        //}
     }
 }

@@ -1,3 +1,4 @@
+using Game.Grid.ScriptableObjects;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,14 +13,15 @@ namespace Game.Managers
         [SerializeField]
         private int _height = 4;
 
+        private readonly GridManager _gridManager = GridManager.Instance;
+
         // Start is called before the first frame update
         private void Start()
         {
-            GridManager.Instance.CreateGrid(_width, _height);
+            _gridManager.CreateGrid(_width, _height);
         }
 
-        // Update is called once per frame
-        private void Update()
+        public void SetTargetPicture(TargetPicture target)
         {
         }
     }
