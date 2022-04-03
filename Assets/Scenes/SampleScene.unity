@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnRate: 5
+  _movingBlockPrefab: {fileID: 0}
 --- !u!114 &823842861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnRate: 5
+  _movingBlockPrefab: {fileID: 0}
 --- !u!1001 &7101110917723442388
 PrefabInstance:
   m_ObjectHideFlags: 0

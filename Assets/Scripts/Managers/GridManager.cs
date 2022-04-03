@@ -1,6 +1,8 @@
 using Game.Factories;
 using Game.Grid.ScriptableObjects;
 using Game.GridElements;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Game.Managers
 {
@@ -23,6 +25,9 @@ namespace Game.Managers
             }
         }
 
+        public BaseGrid MainGrid { get { return _grid; } }
+        public TargetThought[] TargetThoughts { get; set; }
+
         private GridManager()
         {
             _builder = new GridFactory();
@@ -44,6 +49,7 @@ namespace Game.Managers
 
         public void ClearTargetGrid()
         {
+            _grid.Blocks.ForEach(block => block.IsOccupied = false);
         }
     }
 }

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17cd7d76bc3a42408d74bc1fa928438, type: 3}
+  m_Name: CoffeeThought
+  m_EditorClassIdentifier: 
+  _width: 3
+  _pictureFragments:
+  - {fileID: 4778100705552406571, guid: aa9d0b7575e0bb64ca041fbf87fe89ee, type: 3}
+  - {fileID: -2869889805168831853, guid: aa9d0b7575e0bb64ca041fbf87fe89ee, type: 3}
+  - {fileID: 6150945924843522277, guid: aa9d0b7575e0bb64ca041fbf87fe89ee, type: 3}
+  - {fileID: -6354703915736047821, guid: aa9d0b7575e0bb64ca041fbf87fe89ee, type: 3}
+  - {fileID: -7724486677483943049, guid: aa9d0b7575e0bb64ca041fbf87fe89ee, type: 3}
+  - {fileID: 1592369665857385146, guid: aa9d0b7575e0bb64ca041fbf87fe89ee, type: 3}
+  - {fileID: 225138798212849042, guid: aa9d0b7575e0bb64ca041fbf87fe89ee, type: 3}
+  - {fileID: -4297864252205995905, guid: aa9d0b7575e0bb64ca041fbf87fe89ee, type: 3}
+  - {fileID: 4145146130969494040, guid: aa9d0b7575e0bb64ca041fbf87fe89ee, type: 3}
+  _thoughtType: 0

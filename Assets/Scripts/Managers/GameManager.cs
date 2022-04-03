@@ -21,6 +21,7 @@ namespace Game.Managers
         // Start is called before the first frame update
         private void Start()
         {
+            _gridManager.TargetThoughts = Resources.LoadAll<TargetThought>("ScriptableObjects/TargetThoughts");
             _gridManager.CreateGrid(_width, _height);
         }
 

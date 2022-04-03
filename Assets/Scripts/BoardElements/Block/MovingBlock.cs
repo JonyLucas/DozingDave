@@ -29,6 +29,8 @@ namespace Game.GridElements
                 _isMoving = true;
                 yield return new WaitForSeconds(_moveRate);
             }
+
+            TargetBlock.IsOccupied = true;
             _isMoving = false;
         }
 
