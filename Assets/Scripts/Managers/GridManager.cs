@@ -8,8 +8,8 @@ namespace Game.Managers
     {
         private static GridManager _instance;
         private readonly GridFactory _builder;
-        private GridBoard _grid;
-        private GridBoard _targetGrid;
+        private BaseGrid _grid;
+        private BaseGrid _targetGrid;
 
         public static GridManager Instance
         {

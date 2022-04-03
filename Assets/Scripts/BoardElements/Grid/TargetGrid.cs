@@ -4,8 +4,10 @@ using UnityEngine;
 
 namespace Game.GridElements
 {
-    public class TargetGrid : GridBoard
+    public class TargetGrid : BaseGrid
     {
+        public override bool IsTargetGrid { get => true; }
+
         public bool ValidateGrid()
         {
             var result = true;

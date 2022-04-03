@@ -14,7 +14,7 @@ namespace Game.Factories
             _blockFactory = new BlockFactory();
         }
 
-        public GridBoard CreateMainGrid(int width, int height)
+        public BaseGrid CreateMainGrid(int width, int height)
         {
             if (_emptyBlock == null)
             {

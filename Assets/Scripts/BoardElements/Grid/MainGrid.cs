@@ -4,8 +4,10 @@ using UnityEngine;
 
 namespace Game.GridElements
 {
-    public class MainGrid : GridBoard
+    public class MainGrid : BaseGrid
     {
+        public override bool IsTargetGrid { get => false; }
+
         public void AvailablePositionAtColumn()
         {
         }

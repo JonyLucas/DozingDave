@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace Game.GridElements
 {
-    public abstract class GridBoard : MonoBehaviour
+    public abstract class BaseGrid : MonoBehaviour
     {
         private int _width;
         private int _height;
         private List<BackgroundBlock> _blocks;
 
-        //public bool IsTargetGrid { get; set; }
+        public abstract bool IsTargetGrid { get; }
 
         public int Width
         { get { return _width; } }

@@ -8,7 +8,7 @@ namespace Game.Factories
     {
         private Sprite _emptyBlock;
 
-        public BackgroundBlock CreateGridBlock(GridBoard grid, int index, int lineIndex, int columnIndex)
+        public BackgroundBlock CreateGridBlock(BaseGrid grid, int index, int lineIndex, int columnIndex)
         {
             if (_emptyBlock == null)
             {
