@@ -21,7 +21,7 @@ namespace Game.Managers
             _gridManager.CreateGrid(_width, _height);
         }
 
-        public void SetTargetPicture(TargetPicture target)
+        public void SetTargetPicture(TargetThought target)
         {
         }
     }

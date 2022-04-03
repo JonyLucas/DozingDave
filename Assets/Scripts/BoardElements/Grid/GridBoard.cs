@@ -3,27 +3,30 @@ using UnityEngine;
 
 namespace Game.GridElements
 {
-    public class GridBoard : MonoBehaviour
+    public abstract class GridBoard : MonoBehaviour
     {
-        public List<GridBlock> Blocks { get; set; }
-        public bool IsTargetGrid { get; set; }
+        private int _width;
+        private int _height;
+        private List<GridBlock> _blocks;
 
-        public bool ValidateGrid()
+        //public bool IsTargetGrid { get; set; }
+
+        public int Width
+        { get { return _width; } }
+
+        public int Height
+        { get { return _height; } }
+
+        public List<GridBlock> Blocks
         {
-            var result = true;
-            if (IsTargetGrid)
+            get { return _blocks; }
+            set
             {
-                foreach (var block in Blocks)
-                {
-                    if (!block.MatchTarget)
-                    {
-                        result = false;
-                        break;
-                    }
-                }
+                _blocks = value;
+                var lastBlock = _blocks[_blocks.Count - 1];
+                _width = lastBlock.XPosition + 1;
+                _height = lastBlock.YPosition + 1;
             }
-
-            return result;
         }
     }
 }

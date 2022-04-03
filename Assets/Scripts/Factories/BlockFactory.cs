@@ -1,18 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
+using Game.Grid.ScriptableObjects;
+using Game.GridElements;
 using UnityEngine;
 
-public class BlockFactory : MonoBehaviour
+namespace Game.Factories
 {
-    // Start is called before the first frame update
-    void Start()
+    public class BlockFactory
     {
-        
-    }
+        private Sprite _emptyBlock;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public GridBlock CreateGridBlock(GridBoard grid, int index, int lineIndex, int columnIndex)
+        {
+            if (_emptyBlock == null)
+            {
+                _emptyBlock = Resources.Load<Sprite>("Sprites/empty_block");
+            }
+
+            var blockObject = new GameObject($"Block ({index})");
+            blockObject.transform.parent = grid.transform;
+
+            var renderer = blockObject.AddComponent<SpriteRenderer>();
+            renderer.sprite = _emptyBlock;
+            renderer.sortingLayerName = "Grid";
+
+            var blockScript = blockObject.AddComponent<GridBlock>();
+            blockScript.XPosition = columnIndex;
+            blockScript.YPosition = lineIndex;
+            blockScript.IsOccupied = false;
+
+            return blockScript;
+        }
+
+        //public GridBoard CreateSpawnedBlock(TargetPicture target)
+        //{
+        //    var grid = CreateGrid(target.Width, target.Height);
+        //    var fragments = target.PictureFragments;
+
+        //    for (int i = 0; i < grid.Blocks.Count; i++)
+        //    {
+        //        grid.Blocks[i].TargetSprite = fragments[i];
+        //    }
+        //}
     }
 }

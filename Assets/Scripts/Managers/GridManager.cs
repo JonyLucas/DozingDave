@@ -30,7 +30,7 @@ namespace Game.Managers
 
         public void CreateGrid(int width, int heigth)
         {
-            _grid = _builder.CreateGrid(width, heigth);
+            _grid = _builder.CreateMainGrid(width, heigth);
         }
 
         public void ClearGrid()
@@ -38,7 +38,7 @@ namespace Game.Managers
             _grid.Blocks.ForEach(block => block.IsOccupied = false);
         }
 
-        public void CreateTargetGrid(TargetPicture target)
+        public void CreateTargetGrid(TargetThought target)
         {
         }
 

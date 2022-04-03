@@ -7,8 +7,14 @@ namespace Game.Factories
     public class GridFactory
     {
         private Sprite _emptyBlock;
+        private readonly BlockFactory _blockFactory;
 
-        public GridBoard CreateGrid(int width, int height)
+        public GridFactory()
+        {
+            _blockFactory = new BlockFactory();
+        }
+
+        public GridBoard CreateMainGrid(int width, int height)
         {
             if (_emptyBlock == null)
             {
@@ -16,7 +22,7 @@ namespace Game.Factories
             }
 
             var gridObject = new GameObject("Grid");
-            var grid = gridObject.AddComponent<GridBoard>();
+            var grid = gridObject.AddComponent<MainGrid>();
 
             var gridBlocks = new List<GridBlock>();
 
@@ -37,40 +43,12 @@ namespace Game.Factories
                     }
                 }
 
-                gridBlocks.Add(CreateBlock(grid, i, lineIndex, columnIndex));
+                gridBlocks.Add(_blockFactory.CreateGridBlock(grid, i, lineIndex, columnIndex));
             }
 
             grid.Blocks = gridBlocks;
 
             return grid;
         }
-
-        private GridBlock CreateBlock(GridBoard grid, int index, int lineIndex, int columnIndex)
-        {
-            var blockObject = new GameObject($"Block ({index})");
-            blockObject.transform.parent = grid.transform;
-
-            var renderer = blockObject.AddComponent<SpriteRenderer>();
-            renderer.sprite = _emptyBlock;
-            renderer.sortingLayerName = "Grid";
-
-            var blockScript = blockObject.AddComponent<GridBlock>();
-            blockScript.XPosition = columnIndex;
-            blockScript.YPosition = lineIndex;
-            blockScript.IsOccupied = false;
-
-            return blockScript;
-        }
-
-        //public GridBoard CreateGridByTarget(TargetPicture target)
-        //{
-        //    var grid = CreateGrid(target.Width, target.Height);
-        //    var fragments = target.PictureFragments;
-
-        //    for (int i = 0; i < grid.Blocks.Count; i++)
-        //    {
-        //        grid.Blocks[i].TargetSprite = fragments[i];
-        //    }
-        //}
     }
 }

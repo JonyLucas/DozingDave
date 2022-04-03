@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Game.Grid.ScriptableObjects
 {
     [CreateAssetMenu(fileName = "TargetPicture", menuName = "TargetPicture", order = 48)]
-    public class TargetPicture : ScriptableObject
+    public class TargetThought : ScriptableObject
     {
         [SerializeField]
         private int _width = 3;

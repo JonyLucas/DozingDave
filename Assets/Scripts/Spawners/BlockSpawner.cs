@@ -12,8 +12,8 @@ namespace Game.Spawners
 
         private List<GameObject> framgmentsList;
 
-        private TargetPicture _coffeeTarget;
-        private TargetPicture _target;
+        private TargetThought _coffeeTarget;
+        private TargetThought _target;
 
         // Start is called before the first frame update
         private void Start()
@@ -25,7 +25,7 @@ namespace Game.Spawners
             yield return new WaitForSeconds(_spawnRate);
         }
 
-        public void SetTarget(TargetPicture target)
+        public void SetTarget(TargetThought target)
         {
             _target = target;
         }
