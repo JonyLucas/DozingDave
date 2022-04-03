@@ -5,8 +5,15 @@ namespace Game.GridScripts
 {
     public class GridBuilder
     {
+        private Sprite _emptyBlock;
+
         public GridBoard CreateGrid(int width, int height)
         {
+            if (_emptyBlock == null)
+            {
+                _emptyBlock = Resources.Load<Sprite>("Sprites/empty_block");
+            }
+
             var gridObject = new GameObject("Grid");
             var grid = gridObject.AddComponent<GridBoard>();
 
@@ -41,6 +48,9 @@ namespace Game.GridScripts
         {
             var blockObject = new GameObject($"Block ({index})");
             blockObject.transform.parent = grid.transform;
+
+            var renderer = blockObject.AddComponent<SpriteRenderer>();
+            renderer.sprite = _emptyBlock;
 
             var blockScript = blockObject.AddComponent<Block>();
             blockScript.XPosition = columnIndex;

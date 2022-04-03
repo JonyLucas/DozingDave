@@ -12,12 +12,6 @@ namespace Game.Managers
         [SerializeField]
         private int _height = 4;
 
-        [SerializeField]
-        private ScriptableGrid _mainGrid;
-
-        [SerializeField]
-        private ScriptableGrid _targetGrid;
-
         // Start is called before the first frame update
         private void Start()
         {

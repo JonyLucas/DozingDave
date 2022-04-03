@@ -1,3 +1,4 @@
+using Game.Grid.ScriptableObjects;
 using Game.GridScripts;
 
 namespace Game.Managers
@@ -7,6 +8,7 @@ namespace Game.Managers
         private static GridManager _instance;
         private readonly GridBuilder _builder;
         private GridBoard _grid;
+        private GridBoard _targetGrid;
 
         public static GridManager Instance
         {
@@ -33,6 +35,14 @@ namespace Game.Managers
         public void ClearGrid()
         {
             _grid.Blocks.ForEach(block => block.IsOccupied = false);
+        }
+
+        public void CreateTargetGrid(TargetPicture target)
+        {
+        }
+
+        public void ClearTargetGrid()
+        {
         }
     }
 }

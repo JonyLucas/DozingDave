@@ -1,18 +1,20 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetPicture : MonoBehaviour
+namespace Game.Grid.ScriptableObjects
 {
-    // Start is called before the first frame update
-    void Start()
+    public class TargetPicture : ScriptableObject
     {
-        
-    }
+        [SerializeField]
+        private int _sideLength = 3;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField]
+        private List<Sprite> _pictureFragments;
+
+        public int SideLength
+        { get { return _sideLength; } }
+
+        public List<Sprite> PictureFragments
+        { get { return new List<Sprite>(_pictureFragments); } }
     }
 }

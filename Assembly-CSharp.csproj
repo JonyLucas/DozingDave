@@ -61,7 +61,6 @@
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\GridScripts\GridBuilder.cs" />
     <Compile Include="Assets\Scripts\GridScripts\GridBoard.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\ScriptableGrid.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\TargetPicture.cs" />
     <Compile Include="Assets\Scripts\Enum\ThoughtType.cs" />
   </ItemGroup>
