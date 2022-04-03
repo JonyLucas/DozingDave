@@ -6,15 +6,15 @@ namespace Game.GridScripts
 {
     public class GridBuilder
     {
-        private readonly Sprite _emptyBlock;
-
-        public GridBuilder()
-        {
-            _emptyBlock = Resources.Load<Sprite>("Sprites/empty_block");
-        }
+        private Sprite _emptyBlock;
 
         public GridBoard CreateGrid(int width, int height)
         {
+            if (_emptyBlock == null)
+            {
+                _emptyBlock = Resources.Load<Sprite>("Sprites/empty_block");
+            }
+
             var gridObject = new GameObject("Grid");
             var grid = gridObject.AddComponent<GridBoard>();
 
