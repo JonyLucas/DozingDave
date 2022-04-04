@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17cd7d76bc3a42408d74bc1fa928438, type: 3}
+  m_Name: PhoneThought
+  m_EditorClassIdentifier: 
+  _width: 3
+  _pictureFragments:
+  - {fileID: 8488923124424956774, guid: d0c52d312cf9ab349b535587335542fb, type: 3}
+  - {fileID: -217846502771282951, guid: d0c52d312cf9ab349b535587335542fb, type: 3}
+  - {fileID: -5884881879317316366, guid: d0c52d312cf9ab349b535587335542fb, type: 3}
+  - {fileID: 5255580740768731159, guid: d0c52d312cf9ab349b535587335542fb, type: 3}
+  - {fileID: 1679454062789371995, guid: d0c52d312cf9ab349b535587335542fb, type: 3}
+  - {fileID: -4546035215860599627, guid: d0c52d312cf9ab349b535587335542fb, type: 3}
+  - {fileID: 2801154080743491318, guid: d0c52d312cf9ab349b535587335542fb, type: 3}
+  - {fileID: 6634251260315055284, guid: d0c52d312cf9ab349b535587335542fb, type: 3}
+  - {fileID: -2977958341345484408, guid: d0c52d312cf9ab349b535587335542fb, type: 3}
+  _thoughtType: 0

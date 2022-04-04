@@ -8,6 +8,9 @@ namespace Game.GridElements
         [SerializeField]
         private float _moveRate = 1;
 
+        [SerializeField]
+        private float _step = 1;
+
         public BackgroundBlock TargetBlock { get; set; }
 
         private bool _isMoving = true;
@@ -23,13 +26,14 @@ namespace Game.GridElements
             var targetY = TargetBlock.transform.position.y;
             while (transform.position.y > targetY)
             {
+                yield return new WaitForSeconds(_moveRate);
                 var newPosition = transform.position;
-                newPosition.y -= 1;
+                newPosition.y -= _step;
                 transform.position = newPosition;
                 _isMoving = true;
-                yield return new WaitForSeconds(_moveRate);
             }
 
+            transform.position = TargetBlock.transform.position;
             TargetBlock.IsOccupied = true;
             _isMoving = false;
         }
