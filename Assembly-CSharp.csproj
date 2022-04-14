@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Observers\Listeners\GenericEventListener.cs" />
     <Compile Include="Assets\Scripts\Observers\Listeners\EventListener.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+    <Compile Include="Assets\Scripts\BoardElements\Grid\BaseGrid.cs" />
     <Compile Include="Assets\Scripts\BoardElements\Grid\TargetGrid.cs" />
     <Compile Include="Assets\Scripts\Enum\ThoughtType.cs" />
     <Compile Include="Assets\Scripts\Observers\Events\GenericGameEvent.cs" />
@@ -73,7 +74,7 @@
     <Compile Include="Assets\Scripts\BoardElements\Block\BackgroundBlock.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\TargetThought.cs" />
     <Compile Include="Assets\Scripts\Factories\GridFactory.cs" />
-    <Compile Include="Assets\Scripts\BoardElements\Grid\BaseGrid.cs" />
+    <Compile Include="Assets\Scripts\BoardElements\Block\DragAndDropBlock.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

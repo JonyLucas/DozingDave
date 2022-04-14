@@ -17,6 +17,9 @@ namespace Game.Spawners
         [SerializeField]
         private GameObject _movingBlockPrefab;
 
+        [SerializeField]
+        private Canvas _canvas;
+
         private List<GameObject> _movingBlocks;
         private List<GameObject> _availableBlocks;
 
